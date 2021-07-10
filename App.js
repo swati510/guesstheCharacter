@@ -1,11 +1,29 @@
 
-import React,{useState} from 'react';
-import { StyleSheet, Text, View, Button, FlatList } from 'react-native';
+import React, { useState, useCallback } from 'react';
 
-import Footer from './components/Footer'
+import AuthNavigator from './navigators/auth-navigator'
+import { NavigationContainer } from '@react-navigation/native';
+
+
 export default function App() {
-  
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userId, setUserId] = useState('');
+  const [refreshed, setrefreshed] = useState(false);
+  const login = useCallback(uid => {
+    setIsLoggedIn(true);
+    setUserId(uid);
+  }, []);
+
+  const logout = useCallback(() => {
+    setIsLoggedIn(false);
+    setUserId(null);
+  }, []);
+
   return (
-    <Footer/>
+    <NavigationContainer>
+     
+   <AuthNavigator/>
+      
+    </NavigationContainer>
   );
 }

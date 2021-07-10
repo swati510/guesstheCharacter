@@ -39,7 +39,8 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    `mongodb+srv://swati:swati123@cluster0.0mdto.mongodb.net/CHARACTERAPP?retryWrites=true&w=majority`
+    `add your mongodb connection string here`
+    
   )
   .then(() => {
     app.listen(5000);
