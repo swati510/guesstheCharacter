@@ -8,7 +8,7 @@ A cross platform mobile Application to let users play a fun, interactive game ba
 - Mongodb for the Database
 
 ## Steps to run:
-1. Clone the repoitory using Command:  git clone -"URL to the repository"
+1. Clone the repoitory using Command:  git clone -"URL to the repository" ,replace the mongodb connection string with your Key
 2. Install the expo CLI see https://docs.expo.io/get-started/installation/
 3. Navigate to the backend folder and run command  **npm install** followed by **npm start**
 4. In the main folder, Run Command **expo install** followed by **npm start**
